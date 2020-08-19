@@ -1,0 +1,45 @@
+<link rel="stylesheet" href="https://cdn.plyr.io/3.5.6/plyr.css" />
+<video class="js-player">
+    <source src=""/>   
+</video>
+
+<style>
+.plyr--video {
+height: 100%;
+width: 100%;
+overflow: visible;
+}
+.plyr--video.plyr--menu-open {
+}
+    body{
+        background-color: #000;
+        overflow: hidden;
+    }
+    .plyr audio, .plyr video {
+    border-radius: inherit;
+    height: 100%;
+    vertical-align: middle;
+    width: 100%;
+}
+</style>
+<script type="text/javascript">
+$('.w-dropdown').hover(function(evt)
+{
+evt.preventDefault();
+
+var openClass = 'w--open';
+var $view = $(this);
+if (evt.type == 'mouseenter')
+
+{ $view.find('.w-dropdown-toggle').addClass(openClass); $view.find('.w-dropdown-list').addClass(openClass); }
+else if (evt.type == 'mouseleave')
+
+{ $view.find('.w-dropdown-toggle').removeClass(openClass); $view.find('.w-dropdown-list').removeClass(openClass); }
+});
+</script><script src="https://cdn.plyr.io/3.5.6/plyr.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const player = Plyr.setup('.js-player');
+    });
+</script></body></html>
